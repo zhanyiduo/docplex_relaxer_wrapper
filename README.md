@@ -5,7 +5,7 @@
 
 ## Install
 ```python
-pip install git+https://github.platforms.engineering/YZHAN6/docplex_relaxer_wrapper.git
+pip install git+https://github.com/zhanyiduo/docplex_relaxer_wrapper
 ```
 ## Input
 * mdl: the model to be relaxed
@@ -22,8 +22,8 @@ pip install git+https://github.platforms.engineering/YZHAN6/docplex_relaxer_wrap
 	from docplex_relaxer.docplex_relaxer_wrapper import relax_solve
     model = opt.build_model()
     if not model.solve():
-        print('\033[1;48mModel infeasible\033[1;m')
-        print('Starting Relaxation\n')
+        print('Model infeasible')
+        print('Starting Relaxation')
         solution, relaxations = opt.relax_solve(model,'named')
         print(relaxations)
     assert solution, print("Fail to get relaxation")
